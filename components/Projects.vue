@@ -4,7 +4,7 @@
 
 <template>
     <div class="projects">
-        <h1>Projects</h1>
+        <h1 class="text-3xl font-bold">Projects</h1>
         <div class="projects-container">
             <div class="project">
                 <img src="../public/projects/gearguard_large.png" class="project-image-large">

@@ -26,8 +26,6 @@ export default {
 
 <template>
   <div class="dot-mask">
-    <!-- <NuxtRouteAnnouncer />
-    <NuxtWelcome /> -->
   </div>
   <header>
     <Navbar />
@@ -45,7 +43,7 @@ export default {
 </template>
 
 <style lang="css">
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -55,7 +53,7 @@ footer {
 body {
   color: #464646FF;
   margin:0;
-  font-family: "Inter", serif;
+  font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   scroll-behavior: smooth;

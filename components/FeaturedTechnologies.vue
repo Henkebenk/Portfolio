@@ -1,6 +1,6 @@
 <script setup>
 import { createClient } from "@supabase/supabase-js";
-const { locale } = useI18n();
+const { locale, t } = useI18n();
 
 const { $supabase } = useNuxtApp();
 
@@ -24,7 +24,7 @@ onMounted(() => {
             class="text-3xl sm:text-5xl text-pretty tracking-tight font-bold text-center"
             hydrate-on-visible
         >
-            Current tech stack
+            {{ t('featured_technologies') }}
         </h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
         

@@ -4,7 +4,7 @@ const localePath = useLocalePath();
 const { t } = useI18n();
 
 // Track active menu item
-const active = ref<string | undefined>(undefined);
+const active = ref<NavigationMenuItem | null>(null);
 
 const open = ref(false);
 
@@ -65,8 +65,8 @@ const items = computed<NavigationMenuItem[]>(() => [
 
 <template>
     <UDrawer
+        :handle="false"
         direction="top"
-        inset
         v-model:open="open"
         title="Drawer with title"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
@@ -79,6 +79,11 @@ const items = computed<NavigationMenuItem[]>(() => [
         />
 
         <template #content>
+            <UContainer class="p-4 flex justify-end">
+                <LanguageButton />
+                <UButton icon="i-lucide-github" color="neutral" size="xl" variant="ghost" class="cursor-pointer" to="https://github.com/Henkebenk/Portfolio"/>
+            </UContainer>
+            <USeparator />
             <UNavigationMenu
                 color="primary"
                 :items="items"

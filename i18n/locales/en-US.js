@@ -13,9 +13,12 @@ export default {
     swedish: "Swedish",
     english: "English",
     hero_title_part_1: "Hey, I'm ",
-    hero_title_part_2: "a developer and student from Sweden.",
+    hero_title_part_2: "Developer and student from Sweden.",
     hero_subtitle: "Focused on clean code, good UX, and thoughtful design.",
     discover_projects: "Discover projects",
-    download_cv: "Download CV"
+    download_cv: "Download CV",
+
+    featured_technologies: "Current tech stack",
+    featured_projects: "Featured projects"
   }
   

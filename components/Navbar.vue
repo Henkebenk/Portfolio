@@ -43,7 +43,7 @@ const items = computed<NavigationMenuItem[]>(() => [
         },
         {
             label: t("stack"),
-            icon: "i-lucide-layers",
+            icon: "i-lucide-layers", // Might change to i-lucide-lab-toolbox
             to: localePath("/stack"),
         },
         {

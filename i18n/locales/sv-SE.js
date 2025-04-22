@@ -13,9 +13,12 @@ export default {
     swedish: "Svenska",
     english: "Engelska",
     hero_title_part_1: "Hej, jag heter ",
-    hero_title_part_2: "utvecklare och student från Sverige.",
+    hero_title_part_2: "Utvecklare och student från Sverige.",
     hero_subtitle: "Fokuserad på tydlig kod, bra användarupplevelse och genomtänkt design.",
     discover_projects: "Utforska projekt",
-    download_cv: "Ladda ner CV"
+    download_cv: "Ladda ner CV",
+
+    featured_technologies: "Nuvarande teknikstack",
+    featured_projects: "Utvalda projekt"
   }
   

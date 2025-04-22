@@ -25,7 +25,7 @@ function showToast() {
             >
                 {{ t("hero_title_part_1")
                 }}<span color="primary" class="text-(--ui-primary)">Henrik</span
-                >,<br />{{ t("hero_title_part_2") }}
+                >.<br />{{ t("hero_title_part_2") }}
             </h1>
             <!-- <h1
                 class="text-5xl sm:text-6xl text-pretty tracking-tight font-bold text-(--ui-text-highlighted) text-center"

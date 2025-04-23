@@ -3,6 +3,11 @@ export default defineNuxtConfig({
     compatibilityDate: "2025-04-20",
     devtools: { enabled: true },
 
+    app: {
+      head: {
+          title: "Henrik | Portfolio",
+      },
+    },
     modules: [
         "@nuxt/content",
         "@nuxt/fonts",

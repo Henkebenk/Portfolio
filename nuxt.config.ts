@@ -11,6 +11,12 @@ export default defineNuxtConfig({
         "@nuxt/ui",
         "@nuxtjs/i18n",
     ],
+    runtimeConfig: {
+      public: {
+        supabase_url: process.env.SUPABASE_URL,
+        supabase_key: process.env.SUPABASE_KEY,
+      }
+    },
     css: ["~/assets/css/main.css"],
     i18n: {
         lazy: true,

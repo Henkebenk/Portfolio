@@ -13,3 +13,6 @@
         </div>
     </UApp>
 </template>
+<script setup lang="ts">
+const config = useRuntimeConfig()
+</script>

@@ -1,10 +1,9 @@
 import { createClient } from '@supabase/supabase-js'
 
 export default defineNuxtPlugin(() => {
-  const supabaseUrl = 'https://rnjdfumzpujebumaphdw.supabase.co'
-  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJuamRmdW16cHVqZWJ1bWFwaGR3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDUyMjc4OTEsImV4cCI6MjA2MDgwMzg5MX0.08fk7SOomCMO20SX2dzBUnr0-xtSOjW4jeijweLPjkk'
+  const runtimeConfig = useRuntimeConfig()
 
-  const supabase = createClient(supabaseUrl, supabaseKey)
+  const supabase = createClient(runtimeConfig.public.supabase_url, runtimeConfig.public.supabase_key)
 
   return {
     provide: {

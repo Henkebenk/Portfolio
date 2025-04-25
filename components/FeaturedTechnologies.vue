@@ -26,7 +26,7 @@ onMounted(() => {
         >
             {{ t('featured_technologies') }}
         </h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
         
             <Tech
                 v-for="tech in technologies"

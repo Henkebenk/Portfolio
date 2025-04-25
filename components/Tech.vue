@@ -1,5 +1,5 @@
 <template>
-    <UCard variant="soft">
+    <UCard variant="outline" class="hover:bg-muted">
         <div class="flex items-center gap-4">
             <div
                 :style="{ backgroundColor: icon_hex + '30' }"
@@ -7,7 +7,7 @@
             >
                 <img :src="props.icon_url" class="w-8 h-8" />
             </div>
-            {{ title }}
+            <span class="select-none">{{ title }}</span>
         </div>
     </UCard>
 </template>

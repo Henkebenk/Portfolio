@@ -19,6 +19,7 @@ export default {
     download_cv: "Ladda ner CV",
 
     featured_technologies: "Nuvarande teknikstack",
-    featured_projects: "Utvalda projekt"
+    featured_projects: "Utvalda projekt",
+    discover_more: "Utforska fler"
   }
   

@@ -1,4 +1,5 @@
 export default {
+    // Home
     home: "Home",
     about: "About",
     projects: "Projects",
@@ -19,6 +20,10 @@ export default {
     download_cv: "Download CV",
 
     featured_technologies: "Current tech stack",
-    featured_projects: "Featured projects"
+    featured_projects: "Featured projects",
+    discover_more: "Discover more"
+
+    // About
+    
   }
   

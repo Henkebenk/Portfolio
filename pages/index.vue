@@ -12,7 +12,7 @@ function showToast() {
 </script>
 
 <template>
-    <div class="flex flex-col gap-16">
+    <div class="flex flex-col gap-32 sm:gap-64">
         <div
             class="z-[-1] absolute inset-0 h-dvh w-full [background-image:radial-gradient(var(--ui-border)_1px,transparent_1px)] [background-color:var(--ui-bg)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)]"
         />
@@ -27,11 +27,6 @@ function showToast() {
                 }}<span color="primary" class="text-(--ui-primary)">Henrik</span
                 >.<br />{{ t("hero_title_part_2") }}
             </h1>
-            <!-- <h1
-                class="text-5xl sm:text-6xl text-pretty tracking-tight font-bold text-(--ui-text-highlighted) text-center"
-            >
-                Henrik Hårshagen<br />{{ t("hero_title_part_2") }}
-            </h1> -->
             <h2
                 class="z-1 text-lg sm:text-xl/8 font-medium text-(--ui-text-dimmed) text-balance"
             >

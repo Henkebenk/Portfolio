@@ -1,3 +1,0 @@
-<template>
-    School projects
-</template>

@@ -1,16 +1,18 @@
 <script setup>
-import { createClient } from "@supabase/supabase-js";
 const { locale, t } = useI18n();
 
 const { $supabase } = useNuxtApp();
 
 const technologies = ref([]);
 
+const isLoading = ref(true);
+
 async function getTechnologies() {
     const { data } = await $supabase.from("technologies").select();
     console.log("Got technologies!", data);
 
     technologies.value = data;
+    isLoading.value = false;
 }
 
 onMounted(() => {
@@ -26,15 +28,7 @@ onMounted(() => {
         >
             {{ t('featured_technologies') }}
         </h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
-        
-            <Tech
-                v-for="tech in technologies"
-                :key="tech.id"
-                :icon_url="tech.icon_url"
-                :title="tech.title"
-                :icon_hex="tech.icon_hex"
-            />
-        </div>
+        <TechnologyGridSkeleton v-if="isLoading" :columns="2" :columns_small="3" :columns_medium="4" :n_items="8"/>
+        <TechnologyGrid v-else :columns="2" :columns_small="3" :columns_medium="4" :technologies="technologies" />
     </div>
 </template>

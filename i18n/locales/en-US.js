@@ -21,9 +21,16 @@ export default {
 
     featured_technologies: "Current tech stack",
     featured_projects: "Featured projects",
-    discover_more: "Discover more"
+    discover_more: "Discover more",
 
     // About
     
+    // Projects
+    personal_projects: "Personal projects",
+    personal_projects_subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget laoreet dui, ut pellentesque urna. Suspendisse lacinia pellentesque leo, sit amet varius sem cursus et. Maecenas interdum fringilla feugiat. Aliquam consectetur hendrerit mi sed mollis.",
+    study_projects: "Study-related projects",
+    study_projects_subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget laoreet dui, ut pellentesque urna. Suspendisse lacinia pellentesque leo, sit amet varius sem cursus et. Maecenas interdum fringilla feugiat. Aliquam consectetur hendrerit mi sed mollis.",
+
+
   }
   

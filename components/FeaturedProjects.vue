@@ -5,11 +5,14 @@ const { $supabase } = useNuxtApp();
 
 const projects = ref([]);
 
+const isLoading = ref(true);
+
 async function getProjects() {
-    const { data } = await $supabase.from("projects").select();
+    const { data } = await $supabase.from("projects").select().eq('is_featured', true);
     console.log("Got projects!", data);
 
     projects.value = data;
+    isLoading.value = false;
 }
 
 onMounted(() => {
@@ -25,16 +28,8 @@ onMounted(() => {
         >
             {{ t("featured_projects") }}
         </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <ProjectCardLarge
-                v-for="project in projects"
-                :key="project.id"
-                :image_url="project.thumbnail_url"
-                :short_description="project['short_description_' + locale]"
-                :title="project.title"
-                :technologies="project.technologies"
-            />
-        </div>
+        <ProjectGridSkeleton v-if="isLoading" :n_items='2' :columns_small='1' :columns_medium='2' />
+        <ProjectGrid v-else :projects="projects" :columns_small='1' :columns_medium='2' />
         <UButton
             trailing-icon="i-lucide-arrow-right"
             variant="subtle"

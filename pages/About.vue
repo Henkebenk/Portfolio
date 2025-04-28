@@ -16,7 +16,7 @@
                     </h2>
                 </div>
                 <div class="rounded-lg bg-muted flex-1 flex aspect-square justify-center items-center">
-                    <UIcon name="i-lucide-image" />
+                <img src="~/public/about_me.jpg" class="w-full h-full rounded-xl">
                 </div>
             </div>
         </div>

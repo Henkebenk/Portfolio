@@ -1,6 +1,15 @@
+<script setup lang="ts">
+const props = defineProps({
+    title: { type: String, required: true },
+    image_url: { type: String, required: true },
+    short_description: { type: String, required: true },
+    technologies: { type: Array, required: true },
+});
+</script>
+
 <template>
     <UCard>
-        <div class="flex flex-col gap-4 sm:gap-6">
+        <div class="flex flex-col gap-4 h-full">
             <div class="flex flex-col gap-6 justify-between h-full">
                 <div>
                     <h3
@@ -19,6 +28,7 @@
                     />
                 </div>
             </div>
+            <div class="flex-grow-1"/>
             <div class="flex gap-1.5">
                 <UBadge
                     color="neutral"
@@ -31,12 +41,3 @@
         </div>
     </UCard>
 </template>
-
-<script setup lang="ts">
-const props = defineProps({
-    title: { type: String, required: true },
-    image_url: { type: String, required: true },
-    short_description: { type: String, required: true },
-    technologies: { type: Array, required: true },
-});
-</script>

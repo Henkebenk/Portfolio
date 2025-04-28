@@ -20,7 +20,7 @@
                 <SocialsButton
                     icon="i-lucide-linkedin"
                     title="LinkedIn"
-                    url="www.linkedin.com/in/henrik-hårshagen-139a2321a"
+                    url="https://linkedin.com/in/henrik-hårshagen-139a2321a"
                 />
             </div>
         </div>

@@ -1,3 +1,11 @@
+<script setup lang="ts">
+const props = defineProps({
+    title: { type: String, required: true },
+    icon_url: { type: String, required: true },
+    icon_hex: { type: String, required: true },
+});
+</script>
+
 <template>
     <UCard variant="outline" class="hover:bg-muted">
         <div class="flex items-center gap-4">
@@ -11,11 +19,3 @@
         </div>
     </UCard>
 </template>
-
-<script setup lang="ts">
-const props = defineProps({
-    title: { type: String, required: true },
-    icon_url: { type: String, required: true },
-    icon_hex: { type: String, required: true },
-});
-</script>

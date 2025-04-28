@@ -37,7 +37,7 @@ const items = computed<NavigationMenuItem[]>(() => [
                     label: t("projects_school"),
                     icon: "i-lucide-graduation-cap",
                     description: t("projects_school_description"),
-                    to: localePath("/projects/school"),
+                    to: localePath("/projects/studies"),
                 },
             ],
         },

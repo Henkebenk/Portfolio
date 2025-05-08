@@ -9,6 +9,7 @@ interface Project {
 const { locale } = useI18n();
 
 const props = defineProps({
+    columns: { type: Number, required: false },
     columns_small: { type: Number, required: false },
     columns_medium: { type: Number, required: false },
     columns_large: { type: Number, required: false },
@@ -20,9 +21,10 @@ const props = defineProps({
     <div
         class="grid gap-6 w-full"
         :class="[
-            'grid-cols-' + columns_small,
-            'sm:grid-cols-' + columns_medium,
-            'lg:grid-cols-' + columns_large,
+            columns ? 'grid-cols-' + columns : '',
+            columns_small ? 'sm:grid-cols-' + columns_small : '',
+            columns_medium ? 'md:grid-cols-' + columns_medium : '',
+            columns_large ? 'lg:grid-cols-' + columns_large : '',
         ]"
     >
         <ProjectGridCard

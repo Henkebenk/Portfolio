@@ -23,6 +23,12 @@ export default defineNuxtConfig({
       }
     },
     css: ["~/assets/css/main.css"],
+    icon: {
+      customCollections: [{
+        prefix: 'custom',
+        dir: './assets/icons'
+      }]
+    },
     i18n: {
         lazy: true,
         langDir: "locales",

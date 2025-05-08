@@ -28,7 +28,6 @@ const props = defineProps({
                     />
                 </div>
             </div>
-            <div class="flex-grow-1"/>
             <div class="flex gap-1.5">
                 <UBadge
                     color="neutral"

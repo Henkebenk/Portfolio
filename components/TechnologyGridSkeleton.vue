@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
     columns: { type: Number, required: false },
     columns_small: { type: Number, required: false },
@@ -10,13 +10,13 @@ const props = defineProps({
 
 <template>
     <div
-        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6"
-        :class="[
-            columns ? 'grid-cols-' + columns : '',
-            columns_small ? 'sm:grid-cols-' + columns_small : '',
-            columns_medium ? 'md:grid-cols-' + columns_medium : '',
-            columns_large ? 'lg:grid-cols-' + columns_large : '',
-        ]"
+        class="grid gap-4 sm:gap-6"
+        :class="{
+            [`grid-cols-${columns}`]: columns,
+            [`sm:grid-cols-${columns_small}`]: columns_small,
+            [`md:grid-cols-${columns_medium}`]: columns_medium,
+            [`lg:grid-cols-${columns_large}`]: columns_large,
+        }"
     >
         <UCard
             v-for="n in n_items"

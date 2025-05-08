@@ -32,7 +32,7 @@ onMounted(() => {
         >
             {{ t("projects_school_description") }}
         </h2>
-        <ProjectGridSkeleton v-if="isLoading" :n_items='3' :columns_small='2' :columns_medium='3' />
-        <ProjectGrid v-else :projects="projects" :columns_small='2' :columns_medium='3' />
+        <ProjectGridSkeleton v-if="isLoading" :n_items='3' :columns='2' :columns_small='3' />
+        <ProjectGrid v-else :projects="projects" :columns='2' :columns_small='3' />
     </div>
 </template>

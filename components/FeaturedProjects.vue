@@ -29,7 +29,7 @@ onMounted(() => {
             {{ t("featured_projects") }}
         </h2>
         <ProjectGridSkeleton v-if="isLoading" :n_items='2' :columns='1' :columns_small='3' />
-        <ProjectGrid v-else :projects="projects" :columns='1' :columns_small='3' />
+        <ProjectGrid v-else :projects="projects" :columns='1' :columns_small='2' />
         <UButton
             trailing-icon="i-lucide-arrow-right"
             variant="subtle"

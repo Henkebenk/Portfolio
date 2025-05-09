@@ -23,7 +23,7 @@ const props = defineProps({
                 <div class="flex flex-col gap-6 justify-between h-full">
                     <div class="flex flex-col gap-2">
                         <USkeleton class="h-6 w-32"/>
-                        <USkeleton class="h-5 w-64"/>
+                        <USkeleton class="h-11 w-64"/> <!-- 48px -->
                     </div>
                     <USkeleton class="rounded-lg w-full aspect-[3/2]"/>
                 </div>

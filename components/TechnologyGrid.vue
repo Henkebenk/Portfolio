@@ -13,20 +13,17 @@ const props = defineProps({
     columns_large: { type: Number, required: false },
     technologies: { type: Array as () => Technology[], required: true },
 });
-
-const gridClasses = computed(() => {
-  const classes = ['grid', 'gap-4', 'sm:gap-6', 'w-full']
-  if (props.columns) classes.push(`grid-cols-${props.columns}`)
-  if (props.columns_small) classes.push(`sm:grid-cols-${props.columns_small}`)
-  if (props.columns_medium) classes.push(`md:grid-cols-${props.columns_medium}`)
-  if (props.columns_large) classes.push(`lg:grid-cols-${props.columns_large}`)
-  return classes
-})
 </script>
 
 <template>
     <div
-        :class="gridClasses"
+        class="grid gap-4 sm:gap-6 w-full"
+        :class="{
+            [`grid-cols-${columns}`]: columns,
+            [`sm:grid-cols-${columns_small}`]: columns_small,
+            [`md:grid-cols-${columns_medium}`]: columns_medium,
+            [`lg:grid-cols-${columns_large}`]: columns_large,
+        }"
     >
         <TechnologyGridCard
             v-for="tech in technologies"

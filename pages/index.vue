@@ -49,5 +49,9 @@ function showToast() {
         <LazyUContainer>
             <FeaturedProjects/>
         </LazyUContainer>
+
+        <LazyUContainer>
+            <Testimonials />
+        </LazyUContainer>
     </div>
 </template>

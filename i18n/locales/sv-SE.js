@@ -29,5 +29,8 @@ export default {
     personal_projects_subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget laoreet dui, ut pellentesque urna. Suspendisse lacinia pellentesque leo, sit amet varius sem cursus et. Maecenas interdum fringilla feugiat. Aliquam consectetur hendrerit mi sed mollis.",
     studies_projects: "Studierelaterade projekt",
     study_projects_subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget laoreet dui, ut pellentesque urna. Suspendisse lacinia pellentesque leo, sit amet varius sem cursus et. Maecenas interdum fringilla feugiat. Aliquam consectetur hendrerit mi sed mollis.",
+
+    // Testimonials
+    testimonials: "Rekommendationer",
   }
   

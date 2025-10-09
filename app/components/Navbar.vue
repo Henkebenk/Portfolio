@@ -42,6 +42,8 @@ const items = ref([
 
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useRoute } from '#app'
+import NordicbaseLogoMountain from './NordicbaseLogoMountain.vue'
+import NordicbaseLogo from './NordicbaseLogo.vue'
 
 
 const isScrolled = ref(false)
@@ -83,7 +85,7 @@ onUnmounted(() => {
 
 <template>
     <div class="fixed w-full top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-8 flex justify-center">
-        <UHeader :class="[
+        <UHeader :toggle="{ class:navActive ? '' : 'dark' }" :class="[
             'mx-auto max-w-[90vw] lg:max-w-(--nav-width) rounded-full z-50 w-full transition-all duration-500',
             navActive
                 ? 'border shadow-xl'
@@ -91,19 +93,21 @@ onUnmounted(() => {
         ]">
             <template #left>
                 <NuxtLink to="/">
-                    <NordicbaseLogoHenrik class="w-auto h-8 shrink-0" />
+                    <NordicbaseLogoHenrik class="hidden sm:block w-auto h-8 shrink-0" />
+                    <NordicbaseLogo class="block sm:hidden w-auto h-8 shrink-0" />
                 </NuxtLink>
             </template>
 
             <template #default>
-                <UNavigationMenu color="primary" variant="link" :items="items" :class="navActive?'': 'dark'"/>
+                <UNavigationMenu color="primary" variant="link" :items="items" :class="navActive ? '' : 'dark'" />
             </template>
             <template #body>
-                <UNavigationMenu color="primary" variant="link" orientation="vertical" :items="items" :class="navActive?'': 'dark'"/>
+                <UNavigationMenu color="primary" variant="link" orientation="vertical" :items="items"
+                     />
             </template>
 
             <template #right>
-                <div :class="['flex flex-row gap-2', navActive ? '' : 'dark']">
+                <div :class="['flex-row gap-2 hidden lg:flex', navActive ? '' : 'dark']">
 
                     <div class="!text-current">
                         <UColorModeButton />

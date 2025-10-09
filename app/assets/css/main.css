@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-green-50: #EFFDF5;
+  --color-green-100: #D9FBE8;
+  --color-green-200: #B3F5D1;
+  --color-green-300: #75EDAE;
+  --color-green-400: #00DC82;
+  --color-green-500: #00C16A;
+  --color-green-600: #00A155;
+  --color-green-700: #007F45;
+  --color-green-800: #016538;
+  --color-green-900: #0A5331;
+  --color-green-950: #052E16;
+
+  --color-brand-50: #fefce8;
+  --color-brand-100: #fff9c2;
+  --color-brand-200: #ffee6b;
+  --color-brand-300: #ffe245;
+  --color-brand-400: #fcce13;
+  --color-brand-500: #ecb506;
+  --color-brand-600: #cc8c02;
+  --color-brand-700: #a26306;
+  --color-brand-800: #864e0d;
+  --color-brand-900: #724011;
+  --color-brand-950: #432005;
+
+  --color-fruit-salad-50: #f4f9f5;
+  --color-fruit-salad-100: #e6f2e7;
+  --color-fruit-salad-200: #cee4d1;
+  --color-fruit-salad-300: #a8cdad;
+  --color-fruit-salad-400: #79af81;
+  --color-fruit-salad-500: #5e9e67;
+  --color-fruit-salad-600: #43764a;
+  --color-fruit-salad-700: #375e3d;
+  --color-fruit-salad-800: #2f4c33;
+  --color-fruit-salad-900: #283f2c;
+  --color-fruit-salad-950: #122115;
+
+  --color-citron-50: #fcfbe9;
+  --color-citron-100: #f8f6cf;
+  --color-citron-200: #f2f0a4;
+  --color-citron-300: #e8e86e;
+  --color-citron-400: #d7d942;
+  --color-citron-500: #babf23;
+  --color-citron-600: #a6ad1b;
+  --color-citron-700: #6e7417;
+  --color-citron-800: #575c18;
+  --color-citron-900: #494e19;
+  --color-citron-950: #272b08;
+
+  --color-raw-umber-50: #fdfce9;
+  --color-raw-umber-100: #fcfbc5;
+  --color-raw-umber-200: #f9f38f;
+  --color-raw-umber-300: #f6e74e;
+  --color-raw-umber-400: #f1d51e;
+  --color-raw-umber-500: #e1bd11;
+  --color-raw-umber-600: #c2940c;
+  --color-raw-umber-700: #9b6b0d;
+  --color-raw-umber-800: #805513;
+  --color-raw-umber-900: #734917;
+  --color-raw-umber-950: #402408;
+
+
+}
+
+:root {
+  --nav-width: 84rem; 
+  --ui-primary-light: var(--color-primary-500);;
+}

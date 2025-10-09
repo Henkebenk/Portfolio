@@ -50,7 +50,7 @@ const config = useRuntimeConfig()
           aria-label="GitHub" color="neutral" variant="ghost" />
         <UButton to="https://gitlab.liu.se/henha806" target="_blank" icon="i-lucide-gitlab"
           aria-label="GitLab" color="neutral" variant="ghost" />
-        <UButton to="www.linkedin.com/in/henrik-hårshagen-139a2321a" target="_blank" icon="i-lucide-linkedin"
+        <UButton to="https://linkedin.com/in/henrik-hårshagen-139a2321a" target="_blank" icon="i-lucide-linkedin"
           aria-label="Linkedin" color="neutral" variant="ghost" />
       </template>
     </UFooter>

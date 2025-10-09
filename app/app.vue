@@ -46,8 +46,12 @@ const config = useRuntimeConfig()
       </template>
 
       <template #right>
-        <UButton to="https://github.com/nuxt-ui-templates/starter" target="_blank" icon="i-simple-icons-github"
+        <UButton to="https://github.com/Henkebenk" target="_blank" icon="i-lucide-github"
           aria-label="GitHub" color="neutral" variant="ghost" />
+        <UButton to="https://gitlab.liu.se/henha806" target="_blank" icon="i-lucide-gitlab"
+          aria-label="GitLab" color="neutral" variant="ghost" />
+        <UButton to="www.linkedin.com/in/henrik-hårshagen-139a2321a" target="_blank" icon="i-lucide-linkedin"
+          aria-label="Linkedin" color="neutral" variant="ghost" />
       </template>
     </UFooter>
   </UApp>

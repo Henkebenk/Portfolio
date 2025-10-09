@@ -21,6 +21,27 @@ export default defineNuxtConfig({
     }
   },
 
+  app: {
+    head: {
+      title: 'NordicBase | Henrik',
+      link: [
+        {
+          rel: 'icon',
+          href: '/favicon-light.ico',
+          type: 'icon',
+          media: '(prefers-color-scheme: light)',
+        },
+        {
+          rel: 'icon',
+          href: '/favicon-dark.ico',
+          type: 'icon',
+          media: '(prefers-color-scheme: dark)',
+        },
+      ],
+    },
+  },
+
+
   supabase: {
     redirect: false,
     key: process.env.SUPABASE_PUBLISHABLE_KEY,

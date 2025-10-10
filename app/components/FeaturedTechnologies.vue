@@ -6,7 +6,7 @@ const technologies = ref([]);
 const isLoading = ref(true);
 
 async function getTechnologies() {
-    const { data, error } = await supabase.from('technologies').select();
+    const { data, error } = await supabase.from('technologies').select().eq('is_featured', true);
     if (error) {
         console.error('Supabase error fetching technologies:', error)
         isLoading.value = false
@@ -15,6 +15,7 @@ async function getTechnologies() {
 
     console.log('Got technologies!', data);
     technologies.value = data || [];
+
     isLoading.value = false;
 }
 

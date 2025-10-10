@@ -17,6 +17,7 @@ interface Project {
     is_featured?: boolean
     is_academic?: boolean
     technologies?: string[]
+    three_d_models?: string[]
     created_at?: string
     updated_at?: string
     [key: string]: any
@@ -24,6 +25,20 @@ interface Project {
 
 const project = ref<Project | null>(null)
 const isLoading = ref(true)
+const selectedModel = ref<string>('')
+const activeIndex = ref(0)
+
+function onClickPrev() {
+    activeIndex.value--
+}
+
+function onClickNext() {
+    activeIndex.value++
+}
+
+function onSelect(index: number) {
+    activeIndex.value = index
+}
 
 async function getProject() {
     const id = route.params.id
@@ -51,18 +66,35 @@ watch(() => route.params.id, () => {
 </script>
 
 <template>
-
-    <UPageSection v-if="!isLoading && project" :title="project.title" class="pt-8 sm:pt-16" :ui="{ title: 'font-mono' }"
-        :description="project.short_description || undefined">
-        <div class="flex flex-col gap-6">
-            <img v-if="project.banner_url || project.thumbnail_url"
-                :src="(project.banner_url || project.thumbnail_url) || undefined" alt="Project Image"
-                class="w-full rounded-lg" />
-            <MDC :value="project.long_description ?? ''" />
-        </div>
-    </UPageSection>
-
-    <!-- <div v-else class="flex justify-center items-center h-64">
-        <span>Loading...</span>
-    </div> -->
+    <div>
+        <UPageSection v-if="!isLoading && project" :title="project.title" class="pt-8 sm:pt-16"
+            :ui="{ title: 'font-mono' }" :description="project.short_description || undefined">
+            <div class="flex flex-col gap-6">
+                <img v-if="project.banner_url || project.thumbnail_url"
+                    :src="(project.banner_url || project.thumbnail_url) || undefined" alt="Project Image"
+                    class="w-full rounded-lg" />
+                <MDC :value="project.long_description ?? ''" />
+            </div>
+        </UPageSection>
+        <UPageSection v-if="project?.three_d_models?.length" title="3D Models" class="pt-8 sm:pt-16"
+            :ui="{ title: 'font-mono' }" description="Interact with the 3D models created in this project below.">
+            <template #title>
+                <label class="font-mono">3D Models</label>
+            </template>
+            <div class="relative">
+                <UCarousel v-slot="{ item }" arrows dots :watch-drag="false" :items="project.three_d_models"
+                    :prev="{ onClick: onClickPrev }" :next="{ onClick: onClickNext }" @select="onSelect">
+                    <ModelViewer :url="item" class="w-full h-[500px]">
+                    </ModelViewer>
+                </UCarousel>
+                <UModal :title="project.three_d_models[activeIndex].split('/').pop()" fullscreen>
+                    <UButton class="cursor-pointer absolute top-0 right-0" icon="i-lucide-maximize"
+                        aria-label="Maximize" color="neutral" variant="ghost" />
+                    <template #body>
+                        <ModelViewer :url="project.three_d_models[activeIndex]" class="w-full h-[90vh]" />
+                    </template>
+                </UModal>
+            </div>
+        </UPageSection>
+    </div>
 </template>

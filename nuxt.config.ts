@@ -27,6 +27,12 @@ export default defineNuxtConfig({
     }
   },
 
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => ['model-viewer'].includes(tag),
+    },
+  },
+
   app: {
     head: {
       title: 'NordicBase | Henrik',

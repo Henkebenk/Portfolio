@@ -13,6 +13,7 @@ interface Project {
     technologies?: string[];
     created_at?: string;
     updated_at?: string;
+    three_d_models?: string[];
     [key: string]: any;
 }
 
@@ -26,7 +27,7 @@ const props = defineProps({
     <div class="grid gap-6 w-full grid-cols-1 sm:grid-cols-3">
         <ProjectGridCard v-for="project in projects" :key="project.id" :id="project.id" :title="project.title"
             :thumbnail_url="project.thumbnail_url || undefined" :banner_url="project.banner_url || undefined" :short_description="project.short_description || undefined"
-            :long_description="project.long_description || undefined" :technologies="project.technologies || []" :is_academic="!!project.is_academic"
+            :long_description="project.long_description || undefined" :technologies="project.technologies || []" :is_academic="!!project.is_academic" :three_d_models="project.three_d_models || []"
             :naked="naked"/>
     </div>
 </template>

@@ -87,11 +87,11 @@ watch(() => route.params.id, () => {
                     <ModelViewer :url="item" class="w-full h-[500px]">
                     </ModelViewer>
                 </UCarousel>
-                <UModal :title="project.three_d_models[activeIndex]?.split('/').pop()" fullscreen>
+                <UModal :title="project.three_d_models[activeIndex]?.split('/').pop()" fullscreen :ui="{body: 'overflow-hidden'}">
                     <UButton class="cursor-pointer absolute top-0 right-0" icon="i-lucide-maximize"
                         aria-label="Maximize" color="neutral" variant="ghost" />
                     <template #body>
-                        <ModelViewer :url="project.three_d_models[activeIndex]" class="w-full h-[90dvh] overflow-hidden" />
+                        <ModelViewer :url="project.three_d_models[activeIndex]" class="w-full h-[90dvh]" />
                     </template>
                 </UModal>
             </div>

@@ -27,7 +27,7 @@ const props = defineProps({
                 </UTooltip>
             </div>
         </template>
-        <img v-if="props.banner_url || props.thumbnail_url" :src="props.banner_url || props.thumbnail_url" class="w-full" />
+        <img v-if="props.thumbnail_url || props.banner_url" :src="props.thumbnail_url || props.banner_url" class="w-full" />
         <div class="flex gap-1.5">
             <UBadge color="neutral" variant="soft" class="text-muted" v-for="technology in props.technologies" :key="technology">{{ technology }}</UBadge>
         </div>

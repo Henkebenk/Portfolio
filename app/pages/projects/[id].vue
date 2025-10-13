@@ -100,9 +100,9 @@ watch(() => route.params.id, () => {
                         <UBadge v-if="project.started_at" icon="i-lucide-calendar"
                             :label="formatDateRange(project.started_at, project.finished_at)" color="neutral"
                             variant="soft" />
-                        <UBadge v-if="project.is_academic" icon="i-lucide-book" label="Academic Project" color="neutral"
+                        <UBadge v-if="project.is_academic" icon="i-lucide-book" label="Academic" color="neutral"
                             variant="soft" />
-                        <UBadge v-if="project.is_featured" icon="i-lucide-star" label="Featured Project" color="neutral"
+                        <UBadge v-if="project.is_featured" icon="i-lucide-star" label="Featured" color="neutral"
                             variant="soft" />
                         <UBadge v-for="tech in project.technologies || []" :key="tech"
                             :label="tech" color="neutral" variant="soft" />

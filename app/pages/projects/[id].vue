@@ -72,7 +72,7 @@ watch(() => route.params.id, () => {
             <div class="flex flex-col gap-6">
                 <img v-if="project.banner_url || project.thumbnail_url"
                     :src="(project.banner_url || project.thumbnail_url) || undefined" alt="Project Image"
-                    class="w-full rounded-lg" />
+                    class="w-full rounded-4xl" />
                 <MDC :value="project.long_description ?? ''" />
             </div>
         </UPageSection>

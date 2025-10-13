@@ -1,4 +1,5 @@
-# Nuxt Starter Template
+# Nordicbase portfolio
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c09eb71f-2445-4d45-800a-e276223e6504/deploy-status)](https://app.netlify.com/projects/henrik-harshagen/deploys)
 
 [![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
 

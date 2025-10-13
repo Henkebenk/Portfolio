@@ -58,6 +58,28 @@ async function getProject() {
     isLoading.value = false
 }
 
+function formatDateRange(startDate: string, endDate: string | null = null) {
+    const start = new Date(startDate);
+
+    const options = { month: 'short', year: 'numeric' };
+    const startMonthYear = start.toLocaleDateString('en-US', options);
+
+    if (!endDate) {
+        return `${startMonthYear} - present`;
+    }
+
+    const end = new Date(endDate);
+    const endMonthYear = end.toLocaleDateString('en-US', options);
+
+    if (start.getFullYear() === end.getFullYear()) {
+        return `${startMonthYear.split(' ')[0]} - ${endMonthYear.split(' ')[0]} ${start.getFullYear()}`;
+    } else {
+        return `${startMonthYear} - ${endMonthYear}`;
+    }
+}
+
+
+
 onMounted(() => getProject())
 
 watch(() => route.params.id, () => {
@@ -73,6 +95,20 @@ watch(() => route.params.id, () => {
                 <img v-if="project.banner_url || project.thumbnail_url"
                     :src="(project.banner_url || project.thumbnail_url) || undefined" alt="Project Image"
                     class="w-full rounded-4xl" />
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-2 flex-wrap">
+                        <UBadge v-if="project.started_at" icon="i-lucide-calendar"
+                            :label="formatDateRange(project.started_at, project.finished_at)" color="neutral"
+                            variant="soft" />
+                        <UBadge v-if="project.is_academic" icon="i-lucide-book" label="Academic Project" color="neutral"
+                            variant="soft" />
+                        <UBadge v-if="project.is_featured" icon="i-lucide-star" label="Featured Project" color="neutral"
+                            variant="soft" />
+                        <UBadge v-for="tech in project.technologies || []" :key="tech"
+                            :label="tech" color="neutral" variant="soft" />
+                    </div>
+
+                </div>
                 <MDC :value="project.long_description ?? ''" />
             </div>
         </UPageSection>
@@ -87,7 +123,8 @@ watch(() => route.params.id, () => {
                     <ModelViewer :url="item" class="w-full h-[500px]">
                     </ModelViewer>
                 </UCarousel>
-                <UModal :title="project.three_d_models[activeIndex]?.split('/').pop()" fullscreen :ui="{body: 'overflow-hidden'}">
+                <UModal :title="project.three_d_models[activeIndex]?.split('/').pop()" fullscreen
+                    :ui="{ body: 'overflow-hidden' }">
                     <UButton class="cursor-pointer absolute top-0 right-0" icon="i-lucide-maximize"
                         aria-label="Maximize" color="neutral" variant="ghost" />
                     <template #body>

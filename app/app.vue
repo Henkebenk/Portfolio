@@ -25,7 +25,7 @@ const config = useRuntimeConfig()
 </script>
 
 <template>
-  <UApp class="flex flex-col justify-center scroll-smooth">
+  <UApp>
     <Navbar />
 
     <UMain>

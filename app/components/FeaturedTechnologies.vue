@@ -13,7 +13,6 @@ async function getTechnologies() {
         return
     }
 
-    console.log('Got technologies!', data);
     technologies.value = data || [];
 
     isLoading.value = false;

@@ -6,7 +6,6 @@ const isLoading = ref(true);
 
 async function getTechnologies() {
     const { data } = await supabase.from("projects").select().eq('is_featured', true);
-    console.log("Got projects!", data);
 
     projects.value = data;
     isLoading.value = false;

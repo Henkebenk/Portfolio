@@ -72,3 +72,14 @@
   --nav-width: 84rem; 
   --ui-primary-light: var(--color-primary-500);;
 }
+
+html, body {
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}

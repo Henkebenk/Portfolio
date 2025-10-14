@@ -10,7 +10,6 @@ const isLoading = ref(true)
 async function getTestimonials() {
     const { data, error } = await supabase.from('testimonials').select()
     if (error) {
-        console.error('Error fetching testimonials', error)
         isLoading.value = false
         return
     }
@@ -23,7 +22,7 @@ onMounted(getTestimonials)
 
 <template>
     <UPageSection id="testimonials" title="Testimonials"
-        description="Hear what others have to say about my work.">
+        description="A few words from people I’ve worked with.">
         <template #title>
             <label class="font-mono">Testimonials</label>
         </template>

@@ -6,7 +6,7 @@ const projects = ref([]);
 const isLoading = ref(true);
 
 async function getProjects() {
-    const { data } = await supabase.from("projects").select().eq('is_academic', false);
+    const { data } = await supabase.from("projects").select().eq('is_academic', false).order('finished_at', { ascending: false });
     projects.value = data;
     isLoading.value = false;
 }

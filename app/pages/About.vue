@@ -42,51 +42,6 @@ const items: TimelineItem[] = [
         icon: 'i-lucide-laptop'
     },
 ]
-
-// const items = ref<TimelineItem[]>([
-//   {
-//     date: 'Aug 2017',
-//     title: 'Started High School',
-//     description: 'Began studying Technology & IT at Polhemsskolan in Gävle.',
-//     icon: 'i-lucide-school'
-//   },
-//   {
-//     date: 'Jun 2020',
-//     title: 'Military Service',
-//     description: 'Served as a Fire Direction Specialist in the Swedish Armed Forces.',
-//     icon: 'i-lucide-shield'
-//   },
-//   {
-//     date: 'Aug 2022',
-//     title: 'University Studies Begin',
-//     description: 'Started studying Media Technology at Linköping University.',
-//     icon: 'i-lucide-graduation-cap'
-//   },
-//   {
-//     date: 'Aug 2023',
-//     title: 'Innovative Programming',
-//     description: 'Transitioned to the Innovative Programming program to focus on software development.',
-//     icon: 'i-lucide-laptop'
-//   },
-//   {
-//     date: '2023–2025',
-//     title: 'Personal Projects',
-//     description: 'Created apps and games combining technology, design, and cycling.',
-//     icon: 'i-lucide-code'
-//   },
-//   {
-//     date: 'Jul 2025',
-//     title: 'Frontend Experience',
-//     description: 'Worked on building and refining modern frontend components.',
-//     icon: 'i-lucide-layout'
-//   },
-//   {
-//     date: 'Present',
-//     title: 'Exploring & Creating',
-//     description: 'Continuing to learn, build, and explore creative digital experiences.',
-//     icon: 'i-lucide-compass'
-//   }
-// ]) -->
 </script>
 
 <template>
@@ -113,8 +68,6 @@ const items: TimelineItem[] = [
             <label>When I’m not coding, I’m usually out on the trails mountain biking or working on side projects.
                 I like learning new things and turning small ideas into something tangible.</label>
         </template>
-
-        <!-- <UAvatar class="size-64 rounded-4xl" src="/pfp.jpg" /> -->
         <img src="/pfp.jpg" class="rounded-4xl h-64" />
     </UPageSection>
 

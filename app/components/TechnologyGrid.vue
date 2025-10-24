@@ -1,14 +1,14 @@
 <script setup lang="ts">
 interface Technology {
-    id: string;
-    icon_url: string;
-    title: string;
-    icon_hex: string;
+    id: string
+    icon_url: string
+    title: string
+    icon_hex: string
 }
 
 const props = defineProps({
     technologies: { type: Array as () => Technology[], required: true },
-});
+})
 </script>
 
 <template>

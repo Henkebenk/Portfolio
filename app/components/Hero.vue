@@ -1,6 +1,6 @@
 <template>
     <div class="px-4 sm:px-6 lg:px-8 pt-8">
-        
+
         <UPageHero
             class="bg-gray-400 bg-[url(/hero.jpg)] bg-blend-multiply max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 rounded-4xl aspect-[3/2] bg-cover bg-center flex flex-col justify-center dark"
             description="I focus on clean code, great user experiences, and building products that make a difference."

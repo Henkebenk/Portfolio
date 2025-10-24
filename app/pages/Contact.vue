@@ -2,12 +2,11 @@
     <UError :error="{
         statusMessage: 'Page under construction',
         message: 'This page is currently being worked on. Please check back later.',
-    }"
-    :clear="{
-      color: 'neutral',
-      size: 'xl',
-      icon: 'i-lucide-arrow-left',
-      class: 'rounded-full'
+    }" :clear="{
+        color: 'neutral',
+        size: 'xl',
+        icon: 'i-lucide-arrow-left',
+        class: 'rounded-full'
     }">
         <template #statusMessage>
             <div class="flex flex-col gap-4 items-center">

@@ -3,32 +3,32 @@
 
 const supabase = useSupabaseClient()
 
-const technologies = ref([]);
-const technologies_by_category = ref({});
-const isLoading = ref(true);
+const technologies = ref([])
+const technologies_by_category = ref({})
+const isLoading = ref(true)
 
 async function getTechnologies() {
-    const { data, error } = await supabase.from('technologies').select().order('title', { ascending: true });
+    const { data, error } = await supabase.from('technologies').select().order('title', { ascending: true })
     if (error) {
         console.error('Supabase error fetching technologies:', error)
         isLoading.value = false
         return
     }
 
-    
-    
+
+
     technologies.value = data || [];
     for (const tech of technologies.value) {
         if (!technologies_by_category.value[tech.category]) {
-            technologies_by_category.value[tech.category] = [];
+            technologies_by_category.value[tech.category] = []
         }
-        technologies_by_category.value[tech.category].push(tech);
+        technologies_by_category.value[tech.category].push(tech)
     }
     // Sort categories alphabetically
     technologies_by_category.value = Object.fromEntries(
         Object.entries(technologies_by_category.value).sort(([a], [b]) => a.localeCompare(b))
     );
-    
+
     isLoading.value = false;
 
 }
@@ -57,29 +57,8 @@ onMounted(() => {
                     <label class="font-mono ">{{ category_titles[category] ?? 'Other' }}</label>
                 </template>
                 <TechnologyGrid :technologies="techs" />
-                
+
             </UPageCTA>
         </UPageList>
     </UPageSection>
-    <!-- <UError :error="{
-        statusMessage: 'Page under construction',
-        message: 'This page is currently being worked on. Please check back later.',
-    }"
-    :clear="{
-      color: 'neutral',
-      size: 'xl',
-      icon: 'i-lucide-arrow-left',
-      class: 'rounded-full'
-    }">
-        <template #statusMessage>
-            <div class="flex flex-col gap-4 items-center">
-
-                <UIcon name="i-lucide-construction" class="size-16 text-primary" />
-
-                <label class="font-mono">
-                    Page under construction
-                </label>
-            </div>
-        </template>
-</UError> -->
 </template>

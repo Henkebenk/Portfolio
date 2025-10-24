@@ -18,7 +18,7 @@ const props = defineProps({
 
 <template>
     <UCarousel v-slot="{ item }" loop :arrows="showArrows" dots :items="testimonials" auto-height
-        :ui="{ item: 'basis-1/1 sm:basis-1/3', controls: 'absolute -bottom-8 inset-x-12'}" class="mb-8 sm:mb-0">
+        :ui="{ item: 'basis-1/1 sm:basis-1/3', controls: 'absolute -bottom-8 inset-x-12' }" class="mb-8 sm:mb-0">
         <TestimonialGridCard class="overflow-visible" :key="item.id" :name="item.name" :description="item.description"
             :quote="item.quote" :avatar_url="item.avatar_url" />
     </UCarousel>

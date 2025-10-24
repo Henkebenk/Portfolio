@@ -23,13 +23,15 @@ const props = defineProps({
             <div class="flex items-center gap-4">
                 <h3 class="text-lg font-semibold">{{ props.title }}</h3>
                 <UTooltip v-if="props.three_d_models.length" text="This project includes 3D models">
-                    <UBadge  color="info" variant="soft" icon="i-lucide-box">3D</UBadge>
+                    <UBadge color="info" variant="soft" icon="i-lucide-box">3D</UBadge>
                 </UTooltip>
             </div>
         </template>
-        <img v-if="props.thumbnail_url || props.banner_url" :src="props.thumbnail_url || props.banner_url" class="w-full" />
+        <img v-if="props.thumbnail_url || props.banner_url" :src="props.thumbnail_url || props.banner_url"
+            class="w-full" />
         <div class="flex gap-1.5 flex-wrap">
-            <UBadge color="neutral" variant="soft" class="text-muted" v-for="technology in props.technologies" :key="technology">{{ technology }}</UBadge>
+            <UBadge color="neutral" variant="soft" class="text-muted" v-for="technology in props.technologies"
+                :key="technology">{{ technology }}</UBadge>
         </div>
     </UPageCard>
 </template>

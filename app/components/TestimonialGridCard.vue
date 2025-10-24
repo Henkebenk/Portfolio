@@ -11,7 +11,8 @@ const props = defineProps({
     <div class="p-1">
         <UPageCard :description="'“' + props.quote + '”'">
             <template #footer>
-                <UUser :name="props.name" :description="props.description" :avatar="{src: props.avatar_url, alt: props.name}" />
+                <UUser :name="props.name" :description="props.description"
+                    :avatar="{ src: props.avatar_url, alt: props.name }" />
             </template>
         </UPageCard>
     </div>

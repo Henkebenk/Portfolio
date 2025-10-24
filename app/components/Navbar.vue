@@ -52,20 +52,14 @@ const isMenuOpen = ref(false)
 
 
 <template>
-  <div
-    class="fixed w-full top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-4 sm:pt-8 flex justify-center"
-    :class="navActive ? '' : 'pt-6'"
-  >
-    <UHeader
-      v-model:open="isMenuOpen"
-      :toggle="{ class:navActive || isMenuOpen ? '' : 'dark' }"
-      :class="[
-        'mx-auto max-w-[90vw] lg:max-w-(--nav-width) rounded-full z-50 w-full transition-all duration-500',
-        navActive
-          ? 'border shadow-xl'
-          : 'bg-transparent shadow-none border-transparent backdrop-blur-none text-neutral-100 mt-4'
-      ]"
-    >
+  <div class="fixed w-full top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-4 sm:pt-8 flex justify-center"
+    :class="navActive ? '' : 'pt-6'">
+    <UHeader v-model:open="isMenuOpen" :toggle="{ class: navActive || isMenuOpen ? '' : 'dark' }" :class="[
+      'mx-auto max-w-[90vw] lg:max-w-(--nav-width) rounded-full z-50 w-full transition-all duration-500',
+      navActive
+        ? 'border shadow-xl'
+        : 'bg-transparent shadow-none border-transparent backdrop-blur-none text-neutral-100 mt-4'
+    ]">
       <template #left>
         <NuxtLink to="/">
           <NordicbaseLogoHenrik class="hidden sm:block w-auto h-8 shrink-0" />

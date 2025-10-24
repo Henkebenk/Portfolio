@@ -21,8 +21,7 @@ onMounted(getTestimonials)
 </script>
 
 <template>
-    <UPageSection id="testimonials" title="Testimonials"
-        description="A few words from people I’ve worked with.">
+    <UPageSection id="testimonials" title="Testimonials" description="A few words from people I’ve worked with.">
         <template #title>
             <label class="font-mono">Testimonials</label>
         </template>

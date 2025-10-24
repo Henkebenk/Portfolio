@@ -26,8 +26,9 @@ const props = defineProps({
 <template>
     <div class="grid gap-12 sm:gap-6 w-full grid-cols-1 sm:grid-cols-3">
         <ProjectGridCard v-for="project in projects" :key="project.id" :id="project.id" :title="project.title"
-            :thumbnail_url="project.thumbnail_url || undefined" :banner_url="project.banner_url || undefined" :short_description="project.short_description || undefined"
-            :long_description="project.long_description || undefined" :technologies="project.technologies || []" :is_academic="!!project.is_academic" :three_d_models="project.three_d_models || []"
-            :naked="naked"/>
+            :thumbnail_url="project.thumbnail_url || undefined" :banner_url="project.banner_url || undefined"
+            :short_description="project.short_description || undefined"
+            :long_description="project.long_description || undefined" :technologies="project.technologies || []"
+            :is_academic="!!project.is_academic" :three_d_models="project.three_d_models || []" :naked="naked" />
     </div>
 </template>

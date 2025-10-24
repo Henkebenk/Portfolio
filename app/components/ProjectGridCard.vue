@@ -28,7 +28,7 @@ const props = defineProps({
             </div>
         </template>
         <img v-if="props.thumbnail_url || props.banner_url" :src="props.thumbnail_url || props.banner_url" class="w-full" />
-        <div class="flex gap-1.5">
+        <div class="flex gap-1.5 flex-wrap">
             <UBadge color="neutral" variant="soft" class="text-muted" v-for="technology in props.technologies" :key="technology">{{ technology }}</UBadge>
         </div>
     </UPageCard>

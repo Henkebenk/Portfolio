@@ -35,7 +35,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'NordicBase | Henrik',
+      title: 'Harshagen | Henrik',
       link: [
         {
           rel: 'icon',

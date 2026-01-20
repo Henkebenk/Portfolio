@@ -68,7 +68,11 @@ const items: TimelineItem[] = [
             <label>When I’m not coding, I’m usually out on the trails mountain biking or working on side projects.
                 I like learning new things and turning small ideas into something tangible.</label>
         </template>
-        <img src="/pfp.jpg" class="rounded-4xl h-64" />
+        <div class="relative">
+            <img src="/pfp-onlybg.jpg" class="rounded-4xl w-256 scale-80 hover:scale-79 transition-all hover:opacity-90">
+            <img src="/pfp-nobg.png" class="rounded-4xl absolute top-0 left-0 pointer-events-none">
+        </div>
+        <!-- <img src="/pfp.jpg" class="rounded-4xl h-64" /> -->
     </UPageSection>
 
 

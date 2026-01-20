@@ -8,7 +8,7 @@ useHead({
   }
 })
 
-const title = 'Nordicbase | Henrik'
+const title = 'Harshagen | Henrik'
 const description = 'A portfolio showcasing projects, technologies, and testimonials from Henrik Hårshagen.'
 
 useSeoMeta({
